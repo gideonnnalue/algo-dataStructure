@@ -106,7 +106,7 @@ class BinarySearchTree {
           } else {
             parentNode.right = currentNode.right;
           }
-        }  
+        }
       }
     }
   }
@@ -117,6 +117,8 @@ tree.insert2(10);
 tree.insert(12);
 tree.insert(9);
 tree.insert(32);
+tree.insert(43);
+tree.insert(31);
 console.log(tree.lookup(9));
 console.log(tree);
 console.log(JSON.stringify(traverse(tree.root)));
@@ -127,3 +129,12 @@ function traverse(node) {
   tree.right = node.right === null ? null : traverse(node.right);
   return tree;
 }
+
+// const traverse1 = (node) => {
+//   const tree = { value: node.value };
+//   tree.left = node.left === null ? null : traverse(node.left);
+//   tree.right = node.right === null ? null : traverse(node.right);
+//   return tree;
+// };
+
+// console.log(JSON.stringify(traverse1(tree.root)));
